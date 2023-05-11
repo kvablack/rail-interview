@@ -11,7 +11,7 @@ Feel free to create a virtualenv/conda env as well.
 ## Your Task
 Take a look at `scripts/train.py`. I've set up a fake "machine learning" problem that learns to output particular values from text inputs using the policy gradient algorithm.
 
-The model takes a batch of text prompts as input and produces a "sample" for each output (in our case, a sample is just a scalar value). It evaluates the samples using a reward function and then updates the model using the policy gradient algorithm.
+The model takes a batch of text prompts as input and produces a "sample" for each prompt (in our case, a sample is just a scalar value). It evaluates the samples using a reward function and then updates the model using the policy gradient algorithm.
 
 The policy gradient algorithm takes a batch of samples as well as an _advantage_ for each sample. The advantage is a scalar value that represents how much better (or worse) the sample is than average. Right now, the advantages are just calculated using the mean and standard deviation of the rewards across the entire batch.
 
